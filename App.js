@@ -20,10 +20,20 @@ import {
 import {
   Colors,
   DebugInstructions,
-  Header,
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+const CustomHeader = ({title}) => {
+  const isDarkMode = useColorScheme() === 'dark';
+  return (
+    <View style={[styles.headerContainer, {backgroundColor: isDarkMode ? Colors.darker : Colors.lighter}]}>
+      <Text style={[styles.headerTitle, {color: isDarkMode ? Colors.white : Colors.black}]}>
+        {title}
+      </Text>
+    </View>
+  );
+};
 
 const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -67,7 +77,7 @@ const App = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
+        <CustomHeader title="Pokemon Battle League" />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
@@ -93,6 +103,16 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    paddingTop: StatusBar.currentHeight,
+    paddingBottom: 16,
+    paddingHorizontal: 24,
+  },
+  headerTitle: {
+    fontSize: 52,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
