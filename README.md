@@ -77,4 +77,4 @@ If you would like to contribute to the BattleLeague app, please follow these ste
 
 Credits
 
-The BattleLeague app was created by RamesusXD.
+The BattleLeague app is currently underdevelopment.
