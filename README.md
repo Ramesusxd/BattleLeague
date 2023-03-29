@@ -25,7 +25,7 @@ The BattleLeague app is built using the following technologies:
 
     Node.js and Express.js for the backend
     React.js for the frontend
-    MongoDB for the database
+    MongoDB for the database or Firebase ( have not decided yet) 
 
 Installation
 
