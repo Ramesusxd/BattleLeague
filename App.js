@@ -1,6 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Source code location 
+ * https://github.com/Ramesusxd/BattleLeague
  *
  * @format
  * @flow strict-local
@@ -77,25 +77,27 @@ const App = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <CustomHeader title="Pokemon Battle League" />
+        <CustomHeader title="Trainer Battle League" />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+          <Section title="Trainer Profile">
+            See your <Text style={styles.highlight}>Trainer Profile</Text> and accomplishments across 
+            the different battle communities.
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title="Battle Communities">
+            Browse New Trainer communities or participate 
+            in your favorite one.
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
+          <Section title="Badge Book">
+            See your badges you earned in different Trainer Communities
+            are you ready for the pokemon league yet.
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
+          <Section title="Settings">
+            Change your settings
           </Section>
-          <LearnMoreLinks />
+          
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -116,6 +118,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+    marginBottom: 16,
   },
   sectionTitle: {
     fontSize: 24,
