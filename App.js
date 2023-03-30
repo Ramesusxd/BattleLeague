@@ -1,11 +1,3 @@
-/**
- * Source code location 
- * https://github.com/Ramesusxd/BattleLeague
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -17,18 +9,15 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const redColor = '#FF0000';
+const whiteColor = '#FFFFFF';
+const blackColor = '#000000';
 
 const CustomHeader = ({title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
-    <View style={[styles.headerContainer, {backgroundColor: isDarkMode ? Colors.darker : Colors.lighter}]}>
-      <Text style={[styles.headerTitle, {color: isDarkMode ? Colors.white : Colors.black}]}>
+    <View style={[styles.headerContainer, {backgroundColor: isDarkMode ? blackColor : whiteColor}]}>
+      <Text style={[styles.headerTitle, {color: isDarkMode ? whiteColor : redColor}]}>
         {title}
       </Text>
     </View>
@@ -43,7 +32,7 @@ const Section = ({children, title}) => {
         style={[
           styles.sectionTitle,
           {
-            color: isDarkMode ? Colors.white : Colors.black,
+            color: isDarkMode ? whiteColor : redColor,
           },
         ]}>
         {title}
@@ -52,7 +41,7 @@ const Section = ({children, title}) => {
         style={[
           styles.sectionDescription,
           {
-            color: isDarkMode ? Colors.light : Colors.dark,
+            color: isDarkMode ? blackColor : whiteColor,
           },
         ]}>
         {children}
@@ -65,7 +54,7 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? blackColor : whiteColor,
   };
 
   return (
@@ -80,7 +69,7 @@ const App = () => {
         <CustomHeader title="Trainer Battle League" />
         <View
           style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            backgroundColor: isDarkMode ? whiteColor : blackColor,
           }}>
           <Section title="Trainer Profile">
             See your <Text style={styles.highlight}>Trainer Profile</Text> and accomplishments across 
