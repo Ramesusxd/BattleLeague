@@ -14,7 +14,6 @@ const redColor = '#FF0000';
 const whiteColor = '#FFFFFF';
 const blackColor = '#000000';
 
-// CustomHeader component
 const CustomHeader = ({ title }) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -24,15 +23,15 @@ const CustomHeader = ({ title }) => {
   );
 };
 
-// Section component
-const Section = ({ children, title, last }) => {
+const Section = ({ children, title, last, reducedMargin }) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <TouchableOpacity onPress={() => alert(`You clicked ${title}`)}>
       <View
         style={[
           styles.sectionContainer,
-          { borderBottomWidth: last ? 0 : 1 }, // Update border bottom width based on 'last' prop
+          { borderBottomWidth: last ? 0 : 1 },
+          reducedMargin ? { marginTop: 16 } : {},
         ]}
       >
         <Text
@@ -60,7 +59,6 @@ const Section = ({ children, title, last }) => {
   );
 };
 
-// App component
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -85,14 +83,14 @@ const App = () => {
             See your <Text style={styles.highlight}>Trainer Profile</Text> and accomplishments across
             the different battle communities.
           </Section>
-          <Section title="Battle Communities">
+          <Section title="Battle Communities" reducedMargin>
             Browse New Trainer communities or participate in your favorite one.
           </Section>
-          <Section title="Badge Book">
+          <Section title="Badge Book" reducedMargin>
             See your badges you earned in different Trainer Communities. Are you ready for the
             Pokemon League yet?
           </Section>
-          <Section title="Settings" last={true}>
+          <Section title="Settings" last={true} reducedMargin>
             Change your settings
           </Section>
         </View>
@@ -113,7 +111,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   sectionContainer: {
-    marginTop: 32,
+    marginTop: 12,
     paddingHorizontal: 24,
     marginBottom: 16,
     borderBottomColor: whiteColor,
