@@ -5,7 +5,10 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+<<<<<<< HEAD
   TouchableOpacity,
+=======
+>>>>>>> origin/master
   useColorScheme,
   View,
 } from 'react-native';
@@ -25,6 +28,7 @@ const CustomHeader = ({title}) => {
   );
 };
 
+<<<<<<< HEAD
 const Section = ({children, title, last}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -50,6 +54,31 @@ const Section = ({children, title, last}) => {
         </Text>
       </View>
     </TouchableOpacity>
+=======
+const Section = ({children, title}) => {
+  const isDarkMode = useColorScheme() === 'dark';
+  return (
+    <View style={styles.sectionContainer}>
+      <Text
+        style={[
+          styles.sectionTitle,
+          {
+            color: isDarkMode ? whiteColor : redColor,
+          },
+        ]}>
+        {title}
+      </Text>
+      <Text
+        style={[
+          styles.sectionDescription,
+          {
+            color: isDarkMode ? blackColor : whiteColor,
+          },
+        ]}>
+        {children}
+      </Text>
+    </View>
+>>>>>>> origin/master
   );
 };
 
@@ -86,9 +115,16 @@ const App = () => {
             See your badges you earned in different Trainer Communities
             are you ready for the pokemon league yet.
           </Section>
+<<<<<<< HEAD
           <Section title="Settings" last={true}>
             Change your settings
           </Section>
+=======
+          <Section title="Settings">
+            Change your settings
+          </Section>
+          
+>>>>>>> origin/master
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -110,11 +146,14 @@ const styles = StyleSheet.create({
     marginTop: 32,
     paddingHorizontal: 24,
     marginBottom: 16,
+<<<<<<< HEAD
     borderBottomWidth: 1,
     borderBottomColor: whiteColor,
     marginLeft: 16,
     marginRight: 16,
     paddingBottom: 12,
+=======
+>>>>>>> origin/master
   },
   sectionTitle: {
     fontSize: 24,
@@ -132,4 +171,7 @@ const styles = StyleSheet.create({
 
 export default App;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
