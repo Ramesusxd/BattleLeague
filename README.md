@@ -78,3 +78,4 @@ If you would like to contribute to the BattleLeague app, please follow these ste
 Credits
 
 The BattleLeague app is currently underdevelopment.
+Gitscript is just a script i made to push additions and updates easier vs keep going back the CMD and enter the commands individualy to upload to github
