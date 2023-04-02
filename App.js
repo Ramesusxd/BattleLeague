@@ -84,14 +84,14 @@ const App = () => {
             the different battle communities.
           </Section>
           <Section title="Battle Communities" reducedMargin>
-            Browse New Trainer <Text style={styles.highlight}>communities</Text> or participate in your favorite one.
+            Browse New Trainer communities or participate in your favorite one.
           </Section>
           <Section title="Badge Book" reducedMargin>
-            See your <Text style={styles.highlight}>Badges</Text> you earned in different Trainer Communities. Are you ready for the
+            See your badges you earned in different Trainer Communities. Are you ready for the
             Pokemon League yet?
           </Section>
           <Section title="Settings" last={true} reducedMargin>
-            Change your <Text style={styles.highlight}>Settings</Text>.
+            Change your settings
           </Section>
         </View>
       </ScrollView>
@@ -134,3 +134,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+
